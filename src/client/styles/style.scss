@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(../images/7909624.jpg); 
+}
+.body {
+    min-height: 90vh;
+}
+
+.mynavbar {
+    background-color: #990599;
+    color: #fff;
+    padding: 12px 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: center;
+    margin-bottom: 2rem;
+}
+
+.hero-headline {
+    background: radial-gradient(#990599, #000);
+    background-size: 100% 200%;
+    background-position: 50% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    font-size: 3.9rem;
+}
+  .hero-headline:after {
+    width: 100px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 25px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #b80000;
+}
+
+header {
+    background: linear-gradient(135deg, #13c4a5 0, #10a4b8 100%);
+    color: #fff;
+    margin: 0 auto;
+    padding: 2rem !important;
+    text-align: center;
+    width: 80%;
+    border-radius: 80px !important;
+}
+
+form {
+    .form-row {
+        justify-content: center;
+        background-color: #fff;
+        padding: 14px 0 !important;
+        border-radius: 35px;
+        box-shadow: 0px 0px 10px 1px rgba(237,26,237,1);
+        margin: 2rem auto !important;
+        .country-flag {
+            position: absolute;
+            right: 20%;
+            top: 36%;
+            z-index: 1;
+        }
+        .mb-2, .my-2 {
+            margin: 10px auto !important;
+        }
+        .col-auto:not(:last-child) {
+            width: 280px;
+        }
+        .btn {
+            background-color: #990599;
+            border: none;
+        }
+        .btn:hover {
+            background-color: #b506b5;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    background: #252525;
+    color: #e7e7e7;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.current {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: beige;
+    h6 {
+        align-self: center;
+        margin: auto 20px;
+    }
+    div {
+        align-self: center;
+        margin: auto 10px;
+        font-weight: 600;
+        font-size: large;
+        p {
+            margin-bottom: 0rem;
+        }
+        #temp {
+            font-size: larger;
+            font-weight: 700;
+        }
+        #weather-description {
+            color: crimson;
+        }
+    }
+}
+
+.carousel-item {
+    img{
+        width: 100%;
+        height:400px;
+        background-size:cover;
+        background-position: center center;
+    }
+}
+
+.modal {
+    @media (min-width: 1200px) {
+        .col-xl {
+            width: 50%;
+            padding: 0 5px !important;
+            h5 {
+                margin-left: 20px;
+            }
+        }
+        .width-50 {
+            width: 50%;
+        }
+    }
+    .modal-header {
+        padding: 0.1rem 1rem;
+    }
+    .modal-body {
+        padding: 0.2rem 1rem;
+        display: none;
+        .col-auto {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            .input-group {
+                width: auto;
+                align-items: center;
+                .input-group-text {
+                    justify-content: center;
+                }
+                .form-control {
+                    white-space: nowrap;
+                    text-align: center;
+                }
+                
+            }
+        }
+        .images-weather {
+            padding-bottom: 0;
+            .col-auto {
+                .input-group {
+                    width: 250px;
+                    .input-group-text {
+                        width: 100px;
+                    }                   
+                    .date {
+                        font-weight: 700;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .forecast-weather {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                // justify-content: center;     // I have an error with this property, some of include divs disappear !!
+                max-width: 100%;
+                text-align: center;
+                margin: 20px;
+                overflow-x: auto;
+                div {
+                    word-wrap: break-word;
+                    max-width: 100%;
+                    margin: auto 5px;
+                    padding: 0 15px;
+                    width: 8rem;
+                    height: 14.5rem;
+                    border-radius: 20px;
+                    background: linear-gradient(135deg, #13c4a5 0, #023c44 100%);
+                    color: #fff;
+                    img {
+                        width: 70px;
+                    }
+                    h5 {
+                        height: 48px;
+                        display: table-cell;
+                    }
+                    h3 {
+                        font-weight: 700;
+                    }
+                    .datetime {
+                        white-space: nowrap;
+                    }
+                }  
+            }
+        }
+        .hotels {
+            .col-auto {
+                justify-content: center;
+                .input-group {
+                    margin: 5px;
+                    #hotelSelect {
+                        width: 250px;
+                    }
+                    a {
+                        color: blue;
+                        text-decoration: underline;
+                    }
+                    a:hover {
+                        color: brown;
+                    }
+                }
+            }
+        }
+        
+    }
+    .modal-footer {
+        padding: 0.5rem;
+    }  
+}
+.clear {
+    display: none;
+}
+
+.trips-container {
+    display: flex;
+    justify-content: center;
+    .card-destination{
+        margin:5% 1%;
+        background: #F5F5F5;
+        border-radius: 3%;
+        display: inline-block;
+        position: relative;
+        width: 350px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        z-index:5;
+    }
+    .delete {
+        display: none;
+        position: absolute;
+        top:10px;
+        right: 10px;
+        cursor: pointer;
+        opacity: 1;
+        background-color: rgba(255,255,255,0.7) !important;
+        font-size: 30px;
+    }
+    .card-destination:hover .delete {
+        display: block;
+    }
+    img{
+        object-fit: cover;
+        width: 100%;
+        height:200px;
+        border-radius: 3% 3% 0  0;
+    }
+    a {
+        color: blue;
+        text-decoration: underline;
+    }
+    .card-destination a:hover {
+        color: brown;
+    }
+    .country-flag{
+        margin:-7% auto;
+        text-align: center;
+    
+    }
+    .flag-icon.flag-icon-squared {
+        width: 1.2em;
+    }
+    .country-flag-circle{
+        border-color: #F5F5F5;
+        border-width: 3px;
+        border-style: solid;
+        border-radius: 50%;
+    }
+    .country-flag-size-2x{font-size: 2em;}
+    .country-flag-size-3x{font-size: 3em;}
+    .country-flag-size-4x{font-size: 4em;}
+    .country-flag-size-5x{font-size: 5em;}
+    
+    .destination-info{
+        margin:15% auto;
+        text-align:center;
+    }
+    .place-name{
+        font-family: 'Righteous', cursive;
+        font-weight: bold;
+        color:#424242;
+    }
+    .place-desc{
+        font-family: 'Bubbler One', sans-serif;
+        color:#424242;
+    }
+    .below-line{
+        margin:0 auto;
+        width:150px;
+        height:2px;
+        background:#232323;
+    }
+    .destination-hastag{
+        margin:5% auto;
+        font-weight: bold;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .current {
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        background-color: beige;
+        h6 {
+            align-self: center;
+            margin: auto 20px;
+        }
+        div {
+            align-self: center;
+            margin: auto 10px;
+            font-weight: 600;
+            font-size: large;
+            p {
+                margin: 0;
+            }
+            #temp {
+                font-size: larger;
+                font-weight: 700;
+            }
+            #weather-description {
+                color: crimson;
+            }
+            img {
+                width: 60px !important;
+                height: auto !important;
+            }
+        }
+    }
+}
