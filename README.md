@@ -24,16 +24,16 @@ The app uses:<br/>
 - babel-loader,
 - file-loader.
 
-You can run it in development mode:
-`$ npm run build-dev`
+You can run it in development mode:<br/>
+`$ npm run build-dev` <br/>
 at port 8080
 
-Or, you can generate dist folder contaning the app:
+Or, you can generate dist folder contaning the app:<br/>
 `$ npm run build-prod`
 
-You have to run the server to run the AYLIEN api:
-`$ npm run start`
+You have to run the server to run the AYLIEN api:<br/>
+`$ npm run start` <br/>
 It'll run at port 8081
 
-You can test the functions to make sure that they run successfully (using Jest)
+You can test the functions to make sure that they run successfully (using Jest)<br/>
 `$ npm run test`
