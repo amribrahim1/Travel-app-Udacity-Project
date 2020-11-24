@@ -14,7 +14,7 @@ User will have got a list of trips planed to, with city name and country, weathe
 and can delete trip from this list or clear it.  
 
 The app uses:<br/>
-- Algolia Places for autocomplete city name in searching,
+- [Algolia Places](https://community.algolia.com/places) for autocomplete city name in searching,
 - GeoNames WebServices APIs (Search Location and Find Nearby Hotel),
 - weatherbit API (providing currunt and forecast weather),
 - pixabayBase API (providing images for the city)
