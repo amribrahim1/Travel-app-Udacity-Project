@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FEND Capstone - Travel App</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://www.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Bubbler+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="main.css" rel="stylesheet"></head>
+
+    <body>
+        <div class="body">
+            <nav class="mynavbar">
+                <h5 class="">Udacity Project 5</h5>
+                <h3 class="text-right">FEND Capstone - Travel App</h3>
+            </nav>
+            <!-- 
+            <header class="jumbotron jumbotron-fluid">
+                <h3>Udacity Project 5</h3>
+                <h1>FEND Capstone - Travel App</h1>
+                <h3>Front-End Web Developer program Nanodegree Program</h3>
+            </header>
+            -->
+            <main class="container">
+                <h1 class="hero-headline text-center">TRAVEL</h1>
+                <section>
+                    <form id="form" onsubmit="Client.handleSubmit(event)">
+                        <div class="form-row align-items-center">
+                            <div class="col-auto f16">
+                                <label class="sr-only" for="city">city</label>
+                                <span class="country-flag" id="country-flag"></span>
+                                <input type="search" class="form-control mb-2" id="city" placeholder="Enter a location" name="city" required>
+                            </div>
+                            <div class="col-auto">
+                                <label class="sr-only" for="Travel Date">Travel Date</label>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Travel Date</div>
+                                    </div>
+                                    <input type="date" class="form-control" id="travelDate" name="TravelDate" placeholder="Travel Date" required>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <label class="sr-only" for="End Date">End Date</label>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">End Date</div>
+                                    </div>
+                                    <input type="date" class="form-control" id="endDate" name="EndDate" placeholder="End Date" required>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Modal -->
+                <div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="cityModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="text-center modal-title"  id="ModalLabel"></h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body" id="modalBody">
+                                <div class="row images-weather">
+                                    <div class="col-xl">
+                                        <h5 id="trip"></h5>
+                                        <div class="col-auto">
+                                            <div class="input-group mb-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">Departure</div>
+                                                </div>
+                                                <p class="form-control" class="date" id="departure"></p>
+                                            </div>
+                                            <div class="input-group mb-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">Return</div>
+                                                </div>
+                                                <p class="form-control" class="date" id="return"></p>
+                                            </div>
+                                        </div>
+                                        <div class="current">
+                                            <h6>Current<br>Weather</h6>
+                                            <div>
+                                                <p id="temp"></p>
+                                                <p id="weather-description"></p>
+                                            </div>
+                                            <div>
+                                                <img id="weather-icon" src="" width="70px"/>
+                                            </div>
+                                        </div>
+                                        <div class="forecast-weather" id="forecastWeather"></div>
+                                    </div>
+                                    <div class="col-xl" id="imagesCol">
+                                        <div id="cityImages" class="carousel slide" data-ride="carousel">
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#cityImages" data-slide-to="0" class="active"></li>
+                                                <li data-target="#cityImages" data-slide-to="1"></li>
+                                                <li data-target="#cityImages" data-slide-to="2"></li>
+                                                <li data-target="#cityImages" data-slide-to="3"></li>
+                                                <li data-target="#cityImages" data-slide-to="4"></li>
+                                            </ol>
+                                            <div class="carousel-inner" id="images">
+                                            </div>
+                                            <a class="carousel-control-prev" href="#cityImages" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#cityImages" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row hotels">
+                                    <div class="col-auto">
+                                        <div class="input-group">
+                                            <select class="form-control" name="hotelName" id="hotelSelect" onchange="Client.selectHotel()">
+                                                
+                                            </select>
+                                        </div>
+                                        <div class="input-group" id="hotelDetails">                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" onclick="Client.saveTrip()">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="clear" data-toggle="tooltip" data-placement="right" class="btn btn-danger clear" onclick="Client.clear()" title="delete all trips">CLEAR</button>
+                
+            </main>
+            <section>
+                <div class="trips-container" id="trips"></div>
+            </section>
+        </div>
+        <footer>
+            <p>Amr Eraky &#169;</p>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+            
+        </script>
+        <!-- Bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <!-- algolia places Autocomplete API -->
+        <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+        
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
