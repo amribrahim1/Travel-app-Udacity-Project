@@ -4,6 +4,8 @@
 ## Udacity Project 5
 ## Udacity FEND Travel App
 
+### Demo: https://amribrahim1.github.io/Travel-app-Udacity-Project/
+
 This's a travel application. user can enter the location where you want to travel, travle date and leaving date, then he will get informations about this city: current weather, weather forecast for trip's days if the trip will be in the next 16 days, images of the city and the hotels arroun this location.
 
 User can save the trip after watching the information about the city and choosing a hotel and booking link for this hotel.
