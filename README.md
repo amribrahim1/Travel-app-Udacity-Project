@@ -13,7 +13,7 @@ User can save the trip after watching the information about the city and choosin
 User will have got a list of trips planed to, with city name and country, weather and hotel,
 and can delete trip from this list or clear it.  
 
-####The app uses:
+#### The app uses:
 - [Algolia Places](https://community.algolia.com/places) for autocomplete city name in searching,
 - [GeoNames WebServices](http://www.geonames.org/export/ws-overview.html) APIs ([Search Location](https://www.geonames.org/export/geonames-search.html) and [Find Nearby Hotel](http://www.geonames.org/hotel)),
 - [weatherbit API](https://www.weatherbit.io/api) (providing [currunt weather](https://www.weatherbit.io/api/weather-current) and [forecast weather](https://www.weatherbit.io/api/weather-forecast-16-day)),
