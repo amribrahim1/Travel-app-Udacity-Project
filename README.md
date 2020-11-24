@@ -11,29 +11,29 @@ User can save the trip after watching the information about the city and choosin
 User will have got a list of trips planed to, with city name and country, weather and hotel,
 and can delete trip from this list or clear it.  
 
-The app uses:
-Algolia Places for autocomplete city name in searching,
-GeoNames WebServices APIs (Search Location and Find Nearby Hotel),
-weatherbit API (providing currunt and forecast weather),
-pixabayBase API (providing images for the city)
-Node js server side,
-WebPack front-end (client side),
-jest for testing,
-css-loader,
-sass-loader,
-babel-loader,
-file-loader.
+The app uses:<br/>
+- Algolia Places for autocomplete city name in searching,
+- GeoNames WebServices APIs (Search Location and Find Nearby Hotel),
+- weatherbit API (providing currunt and forecast weather),
+- pixabayBase API (providing images for the city)
+- Node js server side,
+- WebPack front-end (client side),
+- jest for testing,
+- css-loader,
+- sass-loader,
+- babel-loader,
+- file-loader.
 
 You can run it in development mode:
-$ npm run build-dev
+`$ npm run build-dev`
 at port 8080
 
 Or, you can generate dist folder contaning the app:
-$ npm run build-prod
+`$ npm run build-prod`
 
 You have to run the server to run the AYLIEN api:
-$ npm run start
+`$ npm run start`
 It'll run at port 8081
 
 You can test the functions to make sure that they run successfully (using Jest)
-$ npm run test
+`$ npm run test`
