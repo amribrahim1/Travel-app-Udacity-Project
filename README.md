@@ -15,7 +15,7 @@ and can delete trip from this list or clear it.
 
 The app uses:<br/>
 - [Algolia Places](https://community.algolia.com/places) for autocomplete city name in searching,
-- GeoNames WebServices APIs (Search Location and Find Nearby Hotel),
+- [GeoNames WebServices](http://www.geonames.org/export/ws-overview.html) APIs ([Search Location](https://www.geonames.org/export/geonames-search.html) and [Find Nearby Hotel](http://www.geonames.org/hotel)),
 - weatherbit API (providing currunt and forecast weather),
 - pixabayBase API (providing images for the city)
 - Node js server side,
