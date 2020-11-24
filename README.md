@@ -1,8 +1,8 @@
 # Your favorite choice for a successful trip
 
-# Front-End Web Developer program Nanodegree Program
-# Udacity Project 5
-# Udacity FEND Travel App
+## Front-End Web Developer program Nanodegree Program
+## Udacity Project 5
+## Udacity FEND Travel App
 
 This's a travel application. user can enter the location where you want to travel, travle date and leaving date, then he will get informations about this city: current weather, weather forecast for trip's days if the trip will be in the next 16 days, images of the city and the hotels arroun this location.
 
