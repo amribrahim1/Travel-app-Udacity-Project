@@ -43,3 +43,8 @@ This projec is the 5th project of ([Udacity NANODEGREE PROGRAM Front End Web Dev
 
 #### My certification:
 https://confirm.udacity.com/YUQZUPRD
+
+### Screenshots
+![Screenshot](https://github.com/amribrahim1/Travel-app-Udacity-Project/blob/main/screenshots/01.jpg?raw=true)
+![Screenshot](https://github.com/amribrahim1/Travel-app-Udacity-Project/blob/main/screenshots/02.jpg?raw=true)
+![Screenshot](https://github.com/amribrahim1/Travel-app-Udacity-Project/blob/main/screenshots/03.jpg?raw=true)
