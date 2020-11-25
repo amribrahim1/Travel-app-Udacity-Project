@@ -27,7 +27,7 @@ and can delete trip from this list or clear it.
 
 You can run it in development mode:<br/>
 `$ npm run build-dev` <br/>
-at port 8080
+at http://localhost:8080/
 
 Or, you can generate dist folder contaning the app:<br/>
 `$ npm run build-prod`
