@@ -38,6 +38,13 @@ jobs:
         with:
           # Upload entire repository
           path: './docs'
+      - name: Load environment variables
+        env:
+          algolia_ID: ${{ secrets.algolia_ID }}
+          algolia_API_KEY: ${{ secrets.algolia_API_KEY }}
+        run:
+          echo "algolia_ID=$algolia_ID"
+          echo "algolia_API_KEY=$algolia_API_KEY"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
